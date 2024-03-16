@@ -1,5 +1,5 @@
-from django.shortcuts import render, get_object_or_404, redirect
-from django.core.paginator import Paginator
+# from django.shortcuts import render, get_object_or_404, redirect
+# from django.core.paginator import Paginator
 from django.views.generic import (
     ListView, CreateView, UpdateView, DeleteView, DetailView
 )
@@ -55,6 +55,7 @@ class BirthdayDeleteView(BirthdayMixin, DeleteView):
     pass
 
 
+'''
 def birthday(request, pk=None):
     # Если в запросе указан pk (если получен запрос на редактирование объекта):
     if pk is not None:
@@ -115,4 +116,4 @@ def delete_birthday(request, pk):
         # ...и переадресовываем пользователя на страницу со списком записей.
         return redirect('birthday:list')
     # Если был получен GET-запрос — отображаем форму.
-    return render(request, 'birthday/birthday.html', context)
+    return render(request, 'birthday/birthday.html', context)'''
